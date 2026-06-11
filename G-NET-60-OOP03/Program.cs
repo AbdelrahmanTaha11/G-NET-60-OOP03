@@ -59,5 +59,26 @@ internal class Program
         #endregion
 
         #endregion
+
+        #region Part02
+        Cinema cinema = new Cinema("Cinema");
+
+        cinema.OpenCinema();
+
+        cinema.AddTicket(new StandardTicket("Inception", 120, "A-5"));
+        cinema.AddTicket(new VIPTicket("Avengers", 200, true));
+        cinema.AddTicket(new IMAXTicket("Dune", 180, false));
+
+        cinema.PrintAllTickets();
+
+        Console.WriteLine();
+        Console.WriteLine("----------- Statistics -----------");
+        Console.WriteLine($"Total Tickets Created: {Ticket.GetTotalTickets()}");
+
+        cinema.CloseCinema();
+
+        #endregion
+
+
     }
 }
